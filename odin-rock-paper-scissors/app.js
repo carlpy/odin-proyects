@@ -1,14 +1,3 @@
-/* Rock paper & scissors
-
-Game has to repeat 5 times, then pop up the winner
-
-- player got to chose between the three options
-  - you have to click an image that represents the object, 
-  - then it triggers the event and set the value as the chosen
-
-- then PC chooses randomly another option
-  - use the math.Random() to get the random num from 1-3
-*/
 const btns = document.querySelectorAll(".choices-btns");
 
 let pcPoints = 0;
@@ -43,28 +32,6 @@ btns.forEach((btn) =>
     }
   })
 );
-
-/* 
-
-rock {
-  r - r tie
-  r - p lose
-  r - s win
-}
-
-p {
-  p - p tie
-  p - s lose
-  p - r win 
-}
-
-s {
-  s - s tie
-  s - r lose
-  s - p win
-}
-
-*/
 
 function playRockPaperScissors(playerChoice) {
   let pcChoice = getPCOption();
