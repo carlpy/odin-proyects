@@ -34,7 +34,7 @@ colorsBtns.forEach((btn) => {
     if (btn.dataset.color === "clear") clearGrid(); 
     
     if (btn.dataset.color === "dimensions") {
-      currentGrid = parseInt(prompt("ingrese el nueo numero de grilla"));
+      currentGrid = parseInt(prompt("enter the new grid size"));
       setGridSize(currentGrid);
     }
   });
