@@ -9,4 +9,6 @@ Odin-Rock-paper-scissors: https://655ac900fb2a472832ae4481--endearing-torrone-6e
 
 Odin-Sketch: https://65973cf90537cf4d4ce73af7--glistening-travesseiro-f3920d.netlify.app/
 
+Odin-Calculator: https://6599d3766270e61e1627538f--chimerical-rabanadas-848001.netlify.app/
+
 to play rock paper, use the console of your navigator with F12
