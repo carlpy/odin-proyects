@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
+
+:root {
+  --buttons-color: #596d48;
+  --main-color: #f4f5f2;
+
+  --error-color: #c41414;
+  --success-color: #0cc20c;
+}
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 1px;
+}
+
+html {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: var(--main-color);
+}
+
+aside {
+  background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), no-repeat center/cover url('./assets/nature.avif');
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+  .logo {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    img {
+      width: 150px;
+      height: auto;
+      object-fit: scale-down;
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #eee;
+    }
+  }
+}
+
+section {
+  padding: 0 1rem;
+  margin: 2rem 0;
+
+  .form-prev-text { line-height: 1.5; margin: 0 0 1.5rem 0; }
+
+  .account-txt, .log-in { font-weight: 800; }
+  .log-in { color: var(--buttons-color)}
+
+  form {
+    margin: 1.5rem 0;
+    p { font-size: 1.5rem; font-weight: 800; }
+
+    .inp-container {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 2.5rem 0;
+      margin: 2rem 0;
+    }
+
+    .form-inp {
+      position: relative;
+
+      label {
+        position: absolute;
+        font-size: .8rem;
+        top: -1.3rem;
+      }
+      
+      p { 
+        display: none; 
+        font-size: .8rem;
+        position: absolute;
+        bottom: -20px;
+        right: calc(100% - 215px);
+      }
+
+      input { 
+        position: relative;
+        &:focus { outline: none; }
+      }
+
+      input.error { border: 2px solid var(--error-color); }
+      p.error { display: flex; color: var(--error-color);}
+
+      .success { border: 2px solid var(--success-color); }
+    }
+
+    button {
+      background-color: var(--buttons-color);
+      border: 1px solid #eee;
+      border-radius: 5px;
+      padding: .7rem 1.5rem;
+      color: var(--main-color);
+      font-weight: 800;
+    }
+  }
+} 
+
+@media only screen and (min-width: 769px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .inp-container { 
+    gap: 2.5rem; 
+
+    input {
+      padding: 0.5rem;
+      margin: 0 0 0 1rem;
+      width: 50%;
+      max-width: 200px;
+    }
+  }
+
+  aside { margin: 0; max-width: 500px; }
+
+  section { 
+    padding: 1.5rem;
+
+    form {
+      .form-inp {
+        label { 
+          top: -1.5rem;
+          left: 1rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+} 
+
+@media only screen and (min-width: 1024px) {
+  aside { margin: 0; max-width: 500px; }
+
+  section { 
+    padding: 0 3rem;
+  }
+} 

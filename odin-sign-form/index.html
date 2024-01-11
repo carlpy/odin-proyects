@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin sign up form</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <aside>
+        <!-- bg: assets/bg -->
+        <div class="logo">
+          <img src="./assets/odin-lined.png" alt="" />
+          <p>ODIN</p>
+        </div>
+      </aside>
+
+      <section>
+        <p class="form-prev-text">
+          Lorem ipsum dolor, sit Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Odio, deleniti placeat in repudiandae obcaecati,
+          quaerat eum, quibusdam cupiditate dolorem id totam esse tempore
+          dignissimos amet ad nobis accusantium mollitia unde. amet consectetur
+          adipisicing elit. Eaque at accusamus veritatis ex, magnam neque
+          molestiae enim. Itaque quae aut commodi cumque, id cupiditate deserunt
+          facere possimus! Ut, assumenda veniam.
+        </p>
+        <span>Lorem ipsum dolor sit amet. lorem12</span>
+
+        <form method="#" action="#">
+          <p>Let's do this!</p>
+
+          <div class="inp-container">
+            <div class="form-inp">
+              <label for="name-inp">*FIRST NAME</label>
+              <input
+                placeholder="Jhon"
+                id="name-inp"
+                data-form="name"
+                type="text"
+              />
+              <p class="error"></p>
+            </div>
+
+            <div class="form-inp">
+              <label for="last-inp">*LAST NAME</label>
+              <input
+                placeholder="Doe"
+                id="last-inp"
+                data-form="last"
+                type="text"
+              />
+              <p class="error"></p>
+            </div>
+
+            <div class="form-inp">
+              <label for="email-inp">*EMAIL</label>
+              <input
+                placeholder="someone@example.com"
+                id="email-inp"
+                data-form="email"
+                type="email"
+              />
+              <p class="error"></p>
+            </div>
+
+            <div class="form-inp">
+              <label for="tel-inp">*PHONE NUMBER</label>
+              <input
+                placeholder="XXX-XXX-XXXX"
+                id="tel-inp"
+                data-form="tel"
+                type="tel"
+              />
+              <p class="error"></p>
+            </div>
+
+            <div class="form-inp">
+              <label for="pass-inp">*PASSWORD</label>
+              <input id="pass-inp" data-form="pass" type="password" />
+              <p class="error"></p>
+            </div>
+
+            <div class="form-inp">
+              <label for="pass2-inp">*CONFIRM PASSWORD</label>
+              <input id="pass2-inp" data-form="pass2" type="password" />
+              <p class="error"></p>
+            </div>
+          </div>
+
+          <button>Create Account</button>
+        </form>
+
+        <p class="account-txt">
+          Already have an Account? <span class="log-in">Log in</span>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
