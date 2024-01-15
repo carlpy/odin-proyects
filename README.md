@@ -13,4 +13,4 @@ Odin-Calculator: https://6599d3766270e61e1627538f--chimerical-rabanadas-848001.n
 
 Odin-Sign-up: https://65a04c6807f24f3104d5215e--meek-churros-35d714.netlify.app/
 
-Odin-dashboard: https://65a5a4025a5ead3b90530bde--preeminent-mooncake-ffddf6.netlify.app/
+Odin-dashboard: https://65a5a65deef91037e4f5f4e7--rococo-fenglisu-c3a721.netlify.app/
