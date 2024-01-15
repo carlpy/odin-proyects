@@ -1,13 +1,11 @@
 const form = document.querySelector("form");
-
 const formInps = document.querySelectorAll("[data-form]");
 
 form.addEventListener("submit", (e) => {
   const isValidInps = Array.from(formInps).every(item => item.classList.contains('success'));
 
-  if(!isValidInps) {
-    e.preventDefault(); 
-  } else { 
+  if(!isValidInps) e.preventDefault();
+  else { 
     console.log('success');
     formInps.forEach((inp) => {
       inp.value = "";

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <aside> <!-- in mobile will be a dropdown menu -->
+      <div class="aside-menu">
+        <div class="logo-container">
+          <img src="./assets/dashboard-logo.svg">
+          <h1>Dashboard</h1>
+        </div>
+
+        <div class="burger">
+          <img src="./assets/sidebar-icons/burger-icon.svg" alt="">
+        </div>
+      </div>
+
+      <div>
+        <ul>
+          <li><img src="./assets/sidebar-icons/home-icon.svg">Home</li>
+          <li><img src="./assets/sidebar-icons/profile-card-icon.svg">profile</li>
+          <li><img src="./assets/sidebar-icons/msg-icon.svg">Messages</li>
+          <li><img src="./assets/sidebar-icons/clock-icon.svg">History</li>
+          <li><img src="./assets/sidebar-icons/task-icon.svg">Task</li>
+          <li><img src="./assets/sidebar-icons/people-icon.svg">Communities</li>
+        </ul>
+      </div>
+  
+      <div>
+        <ul>
+          <li><img src="./assets/sidebar-icons/settings-icon.svg">Settings</li>
+          <li><img src="./assets/sidebar-icons/question-icon.svg">Support</li>
+          <li><img src="./assets/sidebar-icons/privacy-icon.svg">Privacy</li>
+        </ul>
+      </div>
+    </aside>  
+
+    <section class="main-section">
+      <nav>
+        <div class="primary-bar">
+          <div class="search">
+            <img src="./assets/profile-icons/search-icon.svg"><input type="text" name="" id="">
+          </div>          
+          
+          <div class="profile">
+            <img src="./assets/profile-icons/bell-icon.svg">
+
+            <div class="profile__picture_container">
+              <img src="./assets/profile-pic/avatar-generations_prsz.jpg">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="second-bar">
+          <div class="profile-info">
+            <div class="profile__picture_container">
+              <img src="./assets/profile-pic/avatar-generations_prsz.jpg">
+            </div>
+            <div>
+              <span>Hello there,</span>
+              <p>Kant Inmanuel (@Kang)</p>
+            </div>
+          </div>
+
+          <div class="post-options">
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="various-container">
+        <section class="proyects-sec">
+          <h2>Your proyects</h2>
+          <!-- should be grid specially auto-fit for mobile-first workflow -->
+          <div class="proyects-container"> 
+            <div>
+              <h2>Cool proyect</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia voluptatibus aperiam velit in, explicabo temporibus, alias iure ut amet voluptate illum</p>
+            </div>
+
+            <div>
+              <h2>Cool proyect</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia voluptatibus aperiam velit in, explicabo temporibus, alias iure ut amet voluptate illum</p>
+            </div>
+
+            <div>
+              <h2>Cool proyect</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia voluptatibus aperiam velit in, explicabo temporibus, alias iure ut amet voluptate illum</p>
+            </div>
+
+            <div>
+              <h2>Cool proyect</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia voluptatibus aperiam velit in, explicabo temporibus, alias iure ut amet voluptate illum</p>
+            </div>
+
+            <div>
+              <h2>Cool proyect</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia voluptatibus aperiam velit in, explicabo temporibus, alias iure ut amet voluptate illum</p>
+            </div>
+
+            <div>
+              <h2>Cool proyect</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia voluptatibus aperiam velit in, explicabo temporibus, alias iure ut amet voluptate illum</p>
+            </div>
+          </div>          
+        </section>
+        
+        <div class="other-container">
+
+          <section class="annoucements-sec">
+            <h2>Announcements</h2>
+            <div class="announces-container">
+              <ul>
+                <li><span>Site Manintenance</span><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere non iste quibusdam nam accusantium cum.</p></li><hr>
+                <li><span>Comunity Share Day</span><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere non iste quibusdam nam accusantium cum.</p></li><hr>
+                <li><span>Updated Privacy Policy</span><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere non iste quibusdam nam accusantium cum.</p></li>
+              </ul>
+            </div>
+          </section>
+          <br>
+          <br>
+  
+          <section class="trending-sec">
+            <h2>Trending</h2>
+            <ul>
+              <li>
+                <div class="trending-profile-pic">
+                  <img src="./assets/trending-pics/user-1.png">
+                </div>
+                <div class="user-info">
+                  <span>@username</span>
+                  <p>current working on</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="trending-profile-pic">
+                  <img src="./assets/trending-pics/user-2.avif">
+                </div>
+                <div class="user-info">
+                  <span>@username</span>
+                  <p>current working on</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="trending-profile-pic">
+                  <img src="./assets/trending-pics/user-3.png">
+                </div>
+                <div class="user-info">
+                  <span>@username</span>
+                  <p>current working on</p>
+                </div>
+              </li>
+              
+              <li>
+                <div class="trending-profile-pic">
+                  <img src="./assets/trending-pics/user-4.webp">
+                </div>
+                <div class="user-info">
+                  <span>@username</span>
+                  <p>current working on</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>
