@@ -1,4 +1,280 @@
 :root {
+  --main-color: #7fc7d9;
+  --secondary-color: #000;
+  --dashboard-bg: #fff;
+  --padding-x: 1.5rem;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  list-style: none;
+}
+ul {
+  padding: 0;
+  padding-inline-start: 0;
+}
+button {
+  cursor: pointer;
+}
+span {
+  display: inline-block;
+}
+body {
+  overflow-x: hidden;
+  background-color: #eee;
+}
+aside {
+  min-width: 230px;
+  align-items: center;
+  background-color: var(--main-color);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 110px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: height 0.7s;
+  overflow: hidden;
+}
+aside.active {
+  height: 100vh;
+}
+aside .logo-container {
+  align-items: center;
+  display: flex;
+}
+aside .logo-container h1 {
+  font-size: 2rem;
+  margin: 0 1rem 0 0;
+}
+aside .aside-menu {
+  align-items: center;
+  display: flex;
+  margin: 0 0 1.5rem 0;
+}
+aside .aside-menu .burger {
+  height: 30px;
+  width: 30px;
+}
+aside div {
+  margin: 0 0 1rem 0;
+  width: 100%;
+}
+aside div ul {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+aside div ul li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 1.5rem 0;
+}
+aside div ul li img {
+  margin: 0 1rem 0 0;
+}
+.main-section {
+  padding: 0 var(--padding-x);
+  width: 100%;
+}
+section nav .primary-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+section nav .primary-bar .search {
+  flex: 1;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+}
+section nav .primary-bar .search img {
+  margin: 0 1rem 0 0;
+}
+section nav .primary-bar .search input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  background-color: var(--dashboard-bg);
+  padding: 0.5rem 1rem;
+}
+section nav .primary-bar .profile {
+  display: flex;
+}
+section nav .primary-bar .profile > img {
+  margin: 0 1rem;
+}
+section nav .primary-bar .profile .profile__picture_container {
+  width: 45px;
+}
+section nav .primary-bar .profile .profile__picture_container img {
+  border: 2px solid #aaa;
+  width: 100%;
+  border-radius: 50%;
+  height: auto;
+  object-fit: scale-down;
+}
+section nav .second-bar {
+  padding: 0.5rem 0;
+  align-items: center;
+  justify-content: space-between;
+}
+section nav .second-bar .profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+}
+section nav .second-bar .profile-info span {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin: 0 0 0.35rem 0;
+}
+section nav .second-bar .profile-info .profile__picture_container {
+  width: 60px;
+  margin: 0 1rem 0 0;
+}
+section nav .second-bar .profile-info .profile__picture_container img {
+  width: 100%;
+  object-fit: scale-down;
+  border-radius: 50%;
+}
+section nav .second-bar .post-options {
+  margin: 1rem 0 0 0;
+}
+section nav .second-bar .post-options button {
+  background-color: var(--main-color);
+  border-radius: 100px;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: #fff;
+  margin: 0 0 0 0.7rem;
+}
+section .various-container {
+  margin: 1.5rem 0 0 0;
+}
+section .various-container .proyects-sec {
+  flex-basis: 85%;
+  margin: 0 0 1.5rem 0;
+}
+section .various-container .proyects-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+section .various-container .proyects-container div {
+  border: 1px solid #ddd;
+  border-left: 4px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 1.5rem;
+  background-color: var(--dashboard-bg);
+}
+section .various-container .proyects-container div h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+section .various-container .proyects-container div p {
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+section .various-container .other-container .annoucements-sec .announces-container {
+  box-shadow: 0 10px 15px -3px #000, 0 4px 6px -4px #000;
+  padding: 1.5rem;
+  margin: 1rem 0 0 0;
+  border-radius: 5px;
+  background-color: var(--dashboard-bg);
+}
+section .various-container .other-container .annoucements-sec .announces-container hr {
+  margin: 0 0 1rem 0;
+}
+section .various-container .other-container .annoucements-sec .announces-container span {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 0.45rem 0;
+}
+section .various-container .other-container .annoucements-sec .announces-container p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+section .various-container .other-container .trending-sec {
+  background-color: #fff;
+  box-shadow: 0 10px 15px -3px #000, 0 4px 6px -4px #000;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+section .various-container .other-container .trending-sec h2 {
+  margin: 0 0 1rem 0;
+}
+section .various-container .other-container .trending-sec ul li {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0.5rem 0;
+}
+section .various-container .other-container .trending-sec ul li .trending-profile-pic {
+  width: 60px;
+  margin: 0 1rem 0 0;
+}
+section .various-container .other-container .trending-sec ul li .trending-profile-pic img {
+  width: 100%;
+  object-fit: scale-down;
+  border-radius: 100%;
+}
+section .various-container .other-container .trending-sec ul li span {
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+section .various-container .other-container .trending-sec ul li p {
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+ }
+  aside {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 2rem;
+ }
+  aside .logo-container {
+    display: block;
+    margin: 0 0 1rem 0;
+ }
+  aside div ul {
+    align-items: flex-start;
+ }
+  aside div ul li {
+    margin: 0 0 1rem 0;
+ }
+  aside .aside-menu .burger {
+    display: none;
+ }
+  .various-container {
+    display: flex;
+ }
+  .various-container .proyects-sec {
+    margin: 0;
+ }
+  .various-container .proyects-sec .proyects-container {
+    margin: 1rem 1rem 0 0;
+ }
+  .various-container .annoucements-sec {
+    max-width: 250px;
+ }
+}
+@media screen and (min-width: 550px) {
+  .second-bar {
+    display: flex;
+ }
+}
+
+/* :root {
   --main-color: #7FC7D9;
   --secondary-color: #000000;
 
@@ -284,4 +560,4 @@ section {
 
 @media screen and (min-width: 550px) {
   .second-bar { display: flex; }
-}
+} */

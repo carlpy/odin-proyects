@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Virtu-Library</h1>
+    </header>
+
+    <main>
+      <div class="book__settings">
+        <button id="addBook">add a new book</button>
+      </div>
+
+      <div class="book__modal__form">
+        <div class="book__modal__form__header">
+          <span>New book info</span>
+          <button class="close-modal">&times;</button>
+        </div>
+
+        <form id="bookAddForm">
+          <label for="title">Titulo del libro<input type="text" id="title" placeholder="e.g The foreigner"/></label>
+          <label for="author">Autor<input type="text" id="author" placeholder="e.g Albert Camus"/></label>
+          <label for="year">Año de publicacion<input type="number" id="year" placeholder="e.g 1947"/></label>
+          <label for="rating">Calificacion 0/5<input type="range" min="0" max="5" id="rating"/></label>
+          <label for="status">Leido?<input type="checkbox" id="status"/></label>
+
+          <button>Agregar</button>
+        </form>
+      </div>
+
+      <div class="overlay"></div>
+      <div class="book__display"></div>
+    </main>
+  </body>
+</html>
