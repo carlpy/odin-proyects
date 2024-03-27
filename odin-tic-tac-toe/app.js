@@ -3,53 +3,45 @@ const symbolSelection = document.querySelector(".symbol-selection");
 const gameBoard = document.querySelectorAll(".game-board div");
 const winMsg = document.querySelector(".winner-msg");
 
-const board = ["", "", "", "", "", "", "", "", ""];
+const winningCombinations = [ [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+
 let symbol = "O";
 let winner = false;
 
-function startGame() {
-  let nMoves = 0;
+gameBoard.forEach((cell) => {
+  cell.addEventListener("click", changeBoard, { once: true });
+});
 
-  for (let i = 0; i < gameBoard.length; i++) {
-    gameBoard[i].addEventListener("click", (e) => {
-      if (!winner && nMoves <= 9) {
-        if (!gameBoard[i].textContent != "") {
-          e.target.textContent = symbol;
-          board[i] = symbol;
-          nMoves++;
-          winner = checkWinner(board, symbol);
-          if (winner) {
-            winMsg.textContent = `the winner is: ${symbol}`;
-          }
-          changeSymbol();
-        }
-      }
+function changeBoard(e) {
+  const cell = e.target;
+  const id = cell.dataset.id;
 
-      if (nMoves >= 9 && !winner) {
-        winMsg.textContent = "it's a tie";
-      }
-    });
+  if (!winner) {
+    if (!gameBoard[id].textContent != "") {
+      cell.textContent = symbol;
+
+      winner = checkWinner(symbol);
+
+      if (winner) { winMsg.textContent = `the winner is: ${symbol}`; }
+    }
+    changeSymbol();
   }
+
+  if (checkDraw()) { winMsg.textContent = "it's a tie"; }
 }
 
-function changeSymbol() {
-  symbol = symbol === "X" ? "O" : "X";
+function checkDraw() {
+  return (
+    Array.from(gameBoard).every((item) => item.textContent !== "") && !winner
+  );
 }
 
-function checkWinner(board, symbol) {
-  if (
-    (board[0] == symbol && board[1] == symbol && board[2] == symbol) ||
-    (board[3] == symbol && board[4] == symbol && board[5] == symbol) ||
-    (board[6] == symbol && board[7] == symbol && board[8] == symbol) ||
-    (board[0] == symbol && board[3] == symbol && board[6] == symbol) ||
-    (board[1] == symbol && board[4] == symbol && board[7] == symbol) ||
-    (board[2] == symbol && board[5] == symbol && board[8] == symbol) ||
-    (board[0] == symbol && board[4] == symbol && board[8] == symbol) ||
-    (board[2] == symbol && board[4] == symbol && board[6] == symbol)
-  ) {
-    return true;
-  }
-  return false;
-}
+function changeSymbol() { symbol = symbol === "X" ? "O" : "X"; }
 
-startGame();
+function checkWinner(symbol) {
+  const board = Array.from(gameBoard);
+
+  return winningCombinations.some((combinations) => {
+    return combinations.every((id) => board[id].textContent === symbol);
+  });
+}
