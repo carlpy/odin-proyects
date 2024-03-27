@@ -10,13 +10,6 @@ let bookList = [
     rating: 5,
     status: true,
   },
-  {
-    title: "The ",
-    author: "Albert Camus",
-    year: 1947,
-    rating: 5,
-    status: true,
-  },
 ];
 
 // DOM elements
